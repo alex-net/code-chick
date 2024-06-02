@@ -1,0 +1,20 @@
+services:
+  php:
+    image: php:cli-alpine
+    # build:
+    #   context: docker
+    #   dockerfile: php.dockerfile
+    user: 1000:1000
+    tty: true
+    volumes:
+      - ./:/tasks
+    working_dir: /tasks
+
+  python:
+    image: python:alpine
+    user: 1000:1000
+    tty: true
+    volumes:
+      - ./:/tasks
+    working_dir: /tasks
+
